@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritika Patel</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#">Ritika Patel</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false">🌙</button>
+            <nav id="site-nav" class="site-nav">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Hi, I'm Ritika Patel</h1>
+                    <p class="lead">BCA — First Semester. Aspiring web developer and lifelong learner.</p>
+                    <p class="hero-actions">
+                        <a href="#contact" class="btn">Contact Me</a>
+                        <a href="#projects" class="btn btn-outline">See Projects</a>
+                    </p>
+                </div>
+                <div class="hero-card">
+                    <ul>
+                        <li><strong>Course:</strong> Bachelor of Computer Applications (BCA)</li>
+                        <li><strong>Semester:</strong> First</li>
+                        <li><strong>Location:</strong> (Add city, country)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2>About</h2>
+                <p>Hello — I'm Ritika, currently studying BCA (First Semester). I enjoy building simple, accessible web experiences and learning new technologies. This portfolio highlights my studies, skills, and early projects.</p>
+            </div>
+        </section>
+
+        <section id="education" class="section education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="card">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <p><strong>Institution:</strong> (Add your college name)</p>
+                    <p><strong>Year:</strong> 2025 — present</p>
+                    <p>Currently in the first semester. Courses include programming fundamentals, web development basics, and mathematics for computing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Git</div>
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Database Basics</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <p>Here are a few early projects and assignments. Replace with your real projects when ready.</p>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive portfolio site built with HTML, CSS and vanilla JavaScript.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>To-Do App</h3>
+                        <p>A simple task manager using localStorage for persistence.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-grid">
+                    <form id="contact-form" class="contact-form">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Say hi or describe a project..." required></textarea>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Reach out</h3>
+                        <p>Add your preferred contact method: email, phone or social links.</p>
+                        <p><strong>Email:</strong> <a href="mailto:ritika@example.com">ritika@example.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Ritika Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
