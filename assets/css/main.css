@@ -59,11 +59,35 @@ body{
 .section h2{margin-top:0}
 .card{background:var(--surface);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
 
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem}
-.skill{background:rgba(255,255,255,0.03);padding:0.6rem;border-radius:8px;text-align:center}
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.achievement-card{background:rgba(255,255,255,0.02);padding:1.5rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .2s ease}
+.achievement-card:hover{transform:translateY(-2px)}
+.achievement-card h3{margin:0 0 0.5rem;color:var(--text);font-size:1rem;display:flex;align-items:center;gap:0.5rem}
+.achievement-card p{margin:0;color:var(--muted);font-size:0.9rem;line-height:1.5}
 
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.project-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:8px}
+.skills-categories{display:flex;flex-direction:column;gap:2rem}
+.skill-category{background:rgba(255,255,255,0.02);padding:1.5rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.skill-category h3{margin:0 0 1rem;color:var(--text);font-size:1.1rem}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.skill-item{background:rgba(255,255,255,0.01);padding:1rem;border-radius:8px}
+.skill-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
+.skill-name{font-weight:500;color:var(--text)}
+.skill-level{font-size:0.8rem;color:var(--muted);background:rgba(124,92,255,0.1);padding:0.2rem 0.5rem;border-radius:12px}
+.skill-bar{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden}
+.skill-progress{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:3px;transition:width 1s ease}
+.soft-skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem}
+.soft-skill{background:rgba(0,194,168,0.1);color:var(--accent-2);padding:0.6rem;border-radius:8px;text-align:center;font-weight:500;border:1px solid rgba(0,194,168,0.2)}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.project-card{background:rgba(255,255,255,0.02);padding:1.5rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .2s ease, box-shadow .2s ease}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.project-card h3{margin:0 0 0.5rem;color:var(--text)}
+.project-card p{margin:0 0 1rem;color:var(--muted);font-size:0.9rem;line-height:1.5}
+.project-tech{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem}
+.tech-tag{background:rgba(124,92,255,0.1);color:var(--accent);padding:0.2rem 0.5rem;border-radius:12px;font-size:0.75rem;font-weight:500;border:1px solid rgba(124,92,255,0.2)}
+.project-links{display:flex;gap:0.8rem}
+.project-link{color:var(--accent-2);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color .2s ease}
+.project-link:hover{color:var(--accent)}
 
 .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start}
 .contact-form{display:flex;flex-direction:column;gap:0.6rem}
@@ -93,11 +117,37 @@ body{
 [data-theme="light"] .hero-card{background:linear-gradient(180deg, rgba(12,20,30,0.02), rgba(12,20,30,0.01));border:1px solid rgba(12,20,30,0.04)}
 [data-theme="light"] .project-card{background:rgba(12,20,30,0.02)}
 
+/* Light-mode mobile nav fixes: ensure nav background and link contrast */
+@media (max-width:720px){
+	[data-theme="light"] .site-nav{
+		background: rgba(255,255,255,0.95);
+		color: var(--text);
+		box-shadow: 0 8px 24px rgba(11,23,36,0.06);
+	}
+	[data-theme="light"] .site-nav a{
+		color: var(--text);
+	}
+	[data-theme="light"] .site-nav a:hover{
+		background: rgba(11,23,36,0.04);
+	}
+}
+
 
 /* Responsive */
 @media (max-width:900px){
 	.hero-inner{grid-template-columns:1fr}
 	.contact-grid{grid-template-columns:1fr}
+}
+
+/* Social links styling */
+.socials{display:flex;gap:0.5rem;align-items:center;margin-left:0.6rem}
+.social-link{display:inline-flex;align-items:center;justify-content:center;padding:6px;border-radius:8px;color:var(--text);text-decoration:none}
+.social-link svg{width:18px;height:18px;display:block;color:var(--text);fill:currentColor}
+.social-link:hover{background:rgba(255,255,255,0.03)}
+
+@media (max-width:720px){
+  /* move socials inside mobile nav visually by hiding in header when nav is open */
+  .socials{order:2}
 }
 
 @media (max-width:720px){
